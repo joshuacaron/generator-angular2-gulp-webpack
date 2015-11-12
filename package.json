@@ -1,0 +1,30 @@
+{
+  "name": "generator-angular2-gulp-webpack",
+  "version": "0.1.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuacaron/generator-angular2-gulp-webpack.git"
+  },
+  "author": "Joshua Caron <joshua@joshuacaron.ca>",
+  "scripts": {},
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/joshuacaron/generator-angular2-gulp-webpack/issues"
+  },
+  "homepage": "https://github.com/joshuacaron/generator-angular2-gulp-webpack#readme",
+  "directories": {}
+}
