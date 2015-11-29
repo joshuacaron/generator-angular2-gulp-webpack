@@ -24,6 +24,13 @@ module.exports = yeoman.generators.Base.extend({
         name: 'author',
         message: 'Author',
         store: true
+      },
+      {
+        type: 'input',
+        name: 'livereload',
+        message: 'Use livereload in development',
+        store: true,
+        default: 'y'
       }
     ];
 
@@ -46,19 +53,34 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('_gulpfile.js'),
         this.destinationPath('gulpfile.js')
       );
-      this.fs.copy(
-        this.templatePath('_server.js'),
-        this.destinationPath('server.js')
-      );
+      if (this.props.livereload === 'y') {
+        this.fs.copy(
+          this.templatePath('_server_livereload.js'),
+          this.destinationPath('server.js')
+        );
+      } else {
+        this.fs.copy(
+          this.templatePath('_server.js'),
+          this.destinationPath('server.js')
+        );
+      }
       this.fs.copy(
         this.templatePath('_webpack.config.js'),
         this.destinationPath('webpack.config.js')
       );
-      this.fs.copyTpl(
-        this.templatePath('src/_index.html'),
-        this.destinationPath('src/index.html'),
-        {title: this.props.title}
-      );
+      if (this.props.livereload === 'y') {
+        this.fs.copyTpl(
+          this.templatePath('src/_index_livereload.html'),
+          this.destinationPath('src/index.html'),
+          {title: this.props.title}
+        );
+      } else {
+        this.fs.copyTpl(
+          this.templatePath('src/_index.html'),
+          this.destinationPath('src/index.html'),
+          {title: this.props.title}
+        );
+      }
       this.fs.copy(
         this.templatePath('src/css/_main.css'),
         this.destinationPath('src/css/main.css')
