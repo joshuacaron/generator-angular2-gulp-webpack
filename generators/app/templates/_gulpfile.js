@@ -1,11 +1,11 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
-var minifyCSS = require('gulp-minify-css');
+var minifyCSS = require('gulp-cssnano');
 var autoprefixer = require('gulp-autoprefixer');
-var minifyHTML = require('gulp-minify-html');
+var minifyHTML = require('gulp-htmlmin');
 var concat = require('gulp-concat');
 var del = require('del');
-var webpack = require('gulp-webpack');
+var webpack = require('webpack-stream');
 var htmlReplace = require('gulp-html-replace');
 
 gulp.task('clean', function() {
