@@ -1,5 +1,5 @@
 var express = require('express')
-var livereload = require('livereload');
+var livereload = require('livereload')
 
 var app = express()
 

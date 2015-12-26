@@ -1,6 +1,6 @@
 {
   "name": "generator-angular2-gulp-webpack",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Yeoman generator for Angular2 using Gulp and webpack to bundle it for production.",
   "license": "MIT",
   "main": "app/index.js",
