@@ -58,5 +58,5 @@ gulp.task('dependencies', function() {
 });
 
 gulp.task('build', ['js', 'css', 'html', 'assets', 'dependencies'], function() {
-  return del.sync(['src/bundle.js'])
+  return del.sync(['src/bundle.js']);
 });
